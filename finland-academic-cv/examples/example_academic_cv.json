@@ -1,0 +1,66 @@
+{
+  "lang": "en",
+  "name": "Elina Mäkinen",
+  "headline": "MHSc  |  Health Informatics and Professional Agency",
+  "contact": {
+    "location": "Tampere, Finland",
+    "phone": "+358 40 000 0000",
+    "email": "elina.makinen@example.com",
+    "orcid": "0000-0000-0000-0000",
+    "linkedin": "https://www.linkedin.com/in/example"
+  },
+  "cvDate": "29 September 2026",
+  "profile": "Health informatics researcher interested in how clinicians keep professional autonomy when digital systems structure their work. My background combines eight years of nursing practice with qualitative field research and survey methods. My doctoral research interest is in when electronic health record design supports clinical judgement and when it pushes clinicians into workarounds.",
+  "researchInterests": [
+    "Professional autonomy and agency in digitally mediated clinical work",
+    "Workarounds as signals of misfit between systems and practice",
+    "Design of electronic health records that supports clinical judgement"
+  ],
+  "sections": [
+    {
+      "heading": "Degrees",
+      "entries": [
+        { "title": "Master of Health Sciences, Health Informatics", "dates": "2022 – 2024", "org": "University of Eastern Finland, Kuopio, Finland",
+          "description": "Thesis: Workarounds in electronic health record use among hospital nurses." },
+        { "title": "Bachelor of Health Care, Nursing", "dates": "2012 – 2016", "org": "Tampere University of Applied Sciences, Finland" }
+      ]
+    },
+    {
+      "heading": "Research Experience",
+      "entries": [
+        {
+          "title": "Master's thesis research", "dates": "2023 – 2024", "org": "University of Eastern Finland, with a university hospital ward",
+          "bullets": [
+            "Examined why hospital nurses work around electronic health record workflows, framed through professional autonomy.",
+            "Interviewed 24 nurses and analysed the data with thematic analysis.",
+            "Found that workarounds protect professional autonomy, the theme my doctoral interest in clinicians' agency builds on."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Research Output",
+      "numbered": [
+        "Mäkinen, E. (2024). Workarounds in electronic health record use among hospital nurses [Master's thesis, University of Eastern Finland]. https://example.org/thesis"
+      ]
+    },
+    {
+      "heading": "Current Employment",
+      "entries": [
+        { "title": "Registered Nurse", "dates": "2016 – present", "org": "Example University Hospital, Tampere",
+          "bullets": ["Daily clinical use of the hospital's electronic health record, the practice setting of the planned doctoral research."] }
+      ]
+    },
+    {
+      "heading": "Language Skills",
+      "lines": ["Finnish – native  |  English – C1  |  Swedish – B1"]
+    },
+    {
+      "heading": "Research Methods and Tools",
+      "labeled": [
+        { "label": "Qualitative", "text": "Semi-structured interviews, thematic analysis, NVivo" },
+        { "label": "Quantitative", "text": "Survey design, descriptive statistics, SPSS" }
+      ]
+    }
+  ]
+}
