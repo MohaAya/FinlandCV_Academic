@@ -9,8 +9,8 @@ const out = process.argv[3] || 'Academic_CV.docx';
 const M = cv.margins || { top: 750, bottom: 650, left: 1000, right: 1000 }; // DXA; A4 width is 11906
 const ACCENT = (cv.accent || '1F3F6E').replace('#', ''), GREY = '555555', B = 20; // 10pt body
 const FI = cv.lang === 'fi';
-const L = FI ? { profile: 'Tutkijaprofiili', interests: 'Tutkimusintressit', cvdate: 'CV päivitetty', orcid: 'ORCID' }
-             : { profile: 'Research Profile', interests: 'Research Interests', cvdate: 'CV date', orcid: 'ORCID' };
+const L = FI ? { profile: 'Tutkijaprofiili', interests: 'Tutkimusintressit', orcid: 'ORCID' }
+             : { profile: 'Research Profile', interests: 'Research Interests', orcid: 'ORCID' };
 const RIGHT = 11906 - M.left - M.right;
 
 const heading = (t) => new Paragraph({ keepNext: true, spacing: { before: 140, after: 50 },
@@ -46,7 +46,6 @@ const ch = [new Paragraph({ spacing: { after: 20 }, children: [new TextRun({ tex
 if (cv.headline) ch.push(new Paragraph({ spacing: { after: 60 }, children: [new TextRun({ text: cv.headline, size: 24, bold: true, color: GREY })] }));
 if (line1.length) ch.push(new Paragraph({ spacing: { after: 20 }, children: line1 }));
 if (line2.length) ch.push(new Paragraph({ spacing: { after: 20 }, children: line2 }));
-if (cv.cvDate) ch.push(new Paragraph({ spacing: { after: 60 }, children: [new TextRun({ text: L.cvdate + ': ' + cv.cvDate, size: 18, color: GREY })] }));
 
 if (cv.profile) { ch.push(heading(L.profile)); ch.push(para(cv.profile)); }
 if (cv.researchInterests?.length) { ch.push(heading(L.interests)); cv.researchInterests.forEach(t => ch.push(bullet(t))); }

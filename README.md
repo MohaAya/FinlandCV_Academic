@@ -14,7 +14,7 @@ It follows the [TENK researcher CV template](https://tenk.fi/en/advice-and-mater
 - **Question, approach, insight:** each research bullet says what was studied, how (design, sample, methods, theory), and what it showed or taught that feeds the research agenda.
 - **Work roles by relevance:** relevant roles get bullets on what grounds the research, such as practice experience, field access or methods. Older unrelated roles get one line each.
 - **TENK section order** with English and Finnish headings: Degrees, Language Skills, Current Employment, Previous Work Experience, Research Funding, Research Output, Supervision, Teaching, Awards, Other Academic Merits, Impact. Early-career applicants can add Research Experience and move it up.
-- **Header:** name alone on the first line, ORCID, CV date, and no date of birth, ID number or photo.
+- **Header:** name alone on the first line and ORCID, with no CV date, date of birth, ID number or photo.
 - **Numbered publications** in one citation style, with DOIs. Ministry publication type codes are added only if a call asks for them.
 - **Honesty rules:** no invented findings, publications or peer-review status, and a thesis is never presented as a journal article. Every sentence linking an experience to the profile is listed for the person to check. TENK notes that misrepresenting merits can be investigated as research misconduct.
 

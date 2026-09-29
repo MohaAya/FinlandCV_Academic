@@ -28,7 +28,7 @@ An academic CV is not a job CV. Do not split roles into Responsibilities and Res
    - Never upgrade status: a master's thesis is not a peer-reviewed article; label preprints, "submitted" and "under review" as such.
    - A connection sentence ("..., relevant to my interest in X") may only link a real construct, method or observation to an interest the profile states. List every such sentence in your delivery message so the person can check it.
    - Keep the person's own wording in the profile; Finnish readers dislike AI-sounding text.
-5. **Structure.** Header: name alone on the first line (never "Name, PhD"), headline with degree/field, town, phone, email, ORCID, LinkedIn/website, CV date. No date of birth, ID number, photo or marital status. Then Research Profile, Research Interests, then the TENK sections in this order, omitting empty ones:
+5. **Structure.** Header: name alone on the first line (never "Name, PhD"), headline with degree/field, town, phone, email, ORCID, LinkedIn/website. No CV date, date of birth, ID number, photo or marital status. Then Research Profile, Research Interests, then the TENK sections in this order, omitting empty ones:
 
    | # | English heading | Finnish heading |
    |---|---|---|
@@ -69,13 +69,12 @@ An academic CV is not a job CV. Do not split roles into Responsibilities and Res
 
 ```json
 {
-  "lang": "en",                     // "en" or "fi" (Finnish labels for profile, interests, CV date)
+  "lang": "en",                     // "en" or "fi" (Finnish labels for profile and interests)
   "accent": "1F3F6E",               // optional hex colour
   "name": "First Last",
   "headline": "Degree  |  Research field",
   "contact": { "location": "Espoo, Finland", "phone": "+358 ...", "email": "...", "orcid": "0000-0000-0000-0000",
                "linkedin": "https://www.linkedin.com/in/...", "website": "https://..." },
-  "cvDate": "29 September 2026",
   "profile": "3-5 sentences, in the person's own words where possible",
   "researchInterests": ["Interest one", "Interest two"],
   "sections": [
@@ -108,8 +107,8 @@ const out = process.argv[3] || 'Academic_CV.docx';
 const M = cv.margins || { top: 750, bottom: 650, left: 1000, right: 1000 }; // DXA; A4 width is 11906
 const ACCENT = (cv.accent || '1F3F6E').replace('#', ''), GREY = '555555', B = 20; // 10pt body
 const FI = cv.lang === 'fi';
-const L = FI ? { profile: 'Tutkijaprofiili', interests: 'Tutkimusintressit', cvdate: 'CV päivitetty', orcid: 'ORCID' }
-             : { profile: 'Research Profile', interests: 'Research Interests', cvdate: 'CV date', orcid: 'ORCID' };
+const L = FI ? { profile: 'Tutkijaprofiili', interests: 'Tutkimusintressit', orcid: 'ORCID' }
+             : { profile: 'Research Profile', interests: 'Research Interests', orcid: 'ORCID' };
 const RIGHT = 11906 - M.left - M.right;
 
 const heading = (t) => new Paragraph({ keepNext: true, spacing: { before: 140, after: 50 },
@@ -145,7 +144,6 @@ const ch = [new Paragraph({ spacing: { after: 20 }, children: [new TextRun({ tex
 if (cv.headline) ch.push(new Paragraph({ spacing: { after: 60 }, children: [new TextRun({ text: cv.headline, size: 24, bold: true, color: GREY })] }));
 if (line1.length) ch.push(new Paragraph({ spacing: { after: 20 }, children: line1 }));
 if (line2.length) ch.push(new Paragraph({ spacing: { after: 20 }, children: line2 }));
-if (cv.cvDate) ch.push(new Paragraph({ spacing: { after: 60 }, children: [new TextRun({ text: L.cvdate + ': ' + cv.cvDate, size: 18, color: GREY })] }));
 
 if (cv.profile) { ch.push(heading(L.profile)); ch.push(para(cv.profile)); }
 if (cv.researchInterests?.length) { ch.push(heading(L.interests)); cv.researchInterests.forEach(t => ch.push(bullet(t))); }
